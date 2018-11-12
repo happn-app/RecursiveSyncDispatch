@@ -44,12 +44,13 @@ extension DispatchQueue {
 	private static let queuesPerThreadKey = "FLRSD_QueuesWithRecursiveDispatchOnThread"
 	
 	private func queueStackCheck(mode: QueueStackCheckMode) -> Bool {
-		var queuesSet = Thread.current.threadDictionary[DispatchQueue.queuesPerThreadKey] as! Set<DispatchQueue>? ?? Set()
+		let checked = Unmanaged.passUnretained(self).toOpaque()
+		var queuesSet = Thread.current.threadDictionary[DispatchQueue.queuesPerThreadKey] as! Set<UnsafeMutableRawPointer>? ?? Set()
 		
 		var modified = false
 		switch mode {
-		case .push: modified =  queuesSet.insert(self).inserted
-		case .pop:  modified = (queuesSet.remove(self) != nil)
+		case .push: modified =  queuesSet.insert(checked).inserted
+		case .pop:  modified = (queuesSet.remove(checked) != nil)
 		}
 		
 		if modified {Thread.current.threadDictionary[DispatchQueue.queuesPerThreadKey] = queuesSet}
@@ -57,20 +58,3 @@ extension DispatchQueue {
 	}
 	
 }
-
-
-#if os(Linux)
-
-extension DispatchQueue : Hashable {
-	
-	public func hash(into hasher: inout Hasher) {
-		hasher.combine(Unmanaged.passUnretained(self).toOpaque())
-	}
-	
-	public static func ==(lhs: DispatchQueue, rhs: DispatchQueue) -> Bool {
-		return Unmanaged.passUnretained(lhs).toOpaque() == Unmanaged.passUnretained(rhs).toOpaque()
-	}
-	
-}
-
-#endif
