@@ -57,3 +57,20 @@ extension DispatchQueue {
 	}
 	
 }
+
+
+#if os(Linux)
+
+extension DispatchQueue : Hashable {
+	
+	public func hash(into hasher: inout Hasher) {
+		hasher.combine(Unmanaged.passUnretained(self).toOpaque())
+	}
+	
+	public static func ==(lhs: DispatchQueue, rhs: DispatchQueue) -> Bool {
+		return Unmanaged.passUnretained(lhs).toOpaque() == Unmanaged.passUnretained(rhs).toOpaque()
+	}
+	
+}
+
+#endif
