@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		7B99E3A32199C3010024FDBD /* RecursiveSyncDispatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B99E39A2199C3010024FDBD /* RecursiveSyncDispatch.framework */; };
 		7B99E3B12199C3200024FDBD /* RecursiveSyncDispatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* RecursiveSyncDispatchTests.swift */; };
-		7B99E3B22199C3200024FDBD /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* XCTestManifests.swift */; };
 		7B99E3B32199C3230024FDBD /* RecursiveSyncDispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* RecursiveSyncDispatch.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,7 +29,6 @@
 		7B99E3B62199C34E0024FDBD /* Test-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Test-Info.plist"; sourceTree = "<group>"; };
 		7B99E3B72199C34E0024FDBD /* Framework-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Framework-Info.plist"; sourceTree = "<group>"; };
 		OBJ_12 /* RecursiveSyncDispatchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecursiveSyncDispatchTests.swift; sourceTree = "<group>"; };
-		OBJ_13 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		OBJ_9 /* RecursiveSyncDispatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecursiveSyncDispatch.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -75,7 +73,6 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_12 /* RecursiveSyncDispatchTests.swift */,
-				OBJ_13 /* XCTestManifests.swift */,
 			);
 			name = RecursiveSyncDispatchTests;
 			path = Tests/RecursiveSyncDispatchTests;
@@ -228,7 +225,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B99E3B12199C3200024FDBD /* RecursiveSyncDispatchTests.swift in Sources */,
-				7B99E3B22199C3200024FDBD /* XCTestManifests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

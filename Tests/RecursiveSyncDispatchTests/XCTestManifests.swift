@@ -1,11 +1,16 @@
 import XCTest
 
+extension RecursiveSyncDispatchTests {
+    static let __allTests = [
+        ("testBasicUsage", testBasicUsage),
+        ("testSimpleUsage", testSimpleUsage),
+    ]
+}
 
-
-#if os(Linux)
-public func allTests() -> [XCTestCaseEntry] {
-	return [
-		testCase(RecursiveSyncDispatchTests.allTests)
-	]
+#if !os(macOS)
+public func __allTests() -> [XCTestCaseEntry] {
+    return [
+        testCase(RecursiveSyncDispatchTests.__allTests),
+    ]
 }
 #endif

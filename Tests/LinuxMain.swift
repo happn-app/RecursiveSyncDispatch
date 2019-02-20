@@ -3,5 +3,6 @@ import XCTest
 import RecursiveSyncDispatchTests
 
 var tests = [XCTestCaseEntry]()
-tests += RecursiveSyncDispatchTests.allTests()
+tests += RecursiveSyncDispatchTests.__allTests()
+
 XCTMain(tests)

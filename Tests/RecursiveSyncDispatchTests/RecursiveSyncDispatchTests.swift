@@ -43,9 +43,4 @@ final class RecursiveSyncDispatchTests: XCTestCase {
 		XCTAssertTrue(wentIn)
 	}
 	
-	static var allTests = [
-		("testBasicUsage", testBasicUsage),
-		("testSimpleUsage", testSimpleUsage),
-	]
-	
 }
