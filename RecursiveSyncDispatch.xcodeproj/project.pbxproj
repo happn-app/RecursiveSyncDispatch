@@ -28,6 +28,7 @@
 		7B99E3A22199C3010024FDBD /* RecursiveSyncDispatchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecursiveSyncDispatchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B99E3B62199C34E0024FDBD /* Test-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Test-Info.plist"; sourceTree = "<group>"; };
 		7B99E3B72199C34E0024FDBD /* Framework-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Framework-Info.plist"; sourceTree = "<group>"; };
+		7BA80D442231D60600A846EC /* License.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = License.txt; sourceTree = "<group>"; };
 		OBJ_12 /* RecursiveSyncDispatchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecursiveSyncDispatchTests.swift; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		OBJ_9 /* RecursiveSyncDispatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecursiveSyncDispatch.swift; sourceTree = "<group>"; };
@@ -90,6 +91,7 @@
 		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
+				7BA80D442231D60600A846EC /* License.txt */,
 				7B99E3942199AA330024FDBD /* Readme.md */,
 				OBJ_6 /* Package.swift */,
 				OBJ_7 /* Sources */,
@@ -172,6 +174,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 9999;
+				ORGANIZATIONNAME = happn;
 				TargetAttributes = {
 					7B99E3992199C3010024FDBD = {
 						CreatedOnToolsVersion = 10.1;
@@ -188,6 +191,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = OBJ_5;
