@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B80A9BC2236A6AB00CECD67 /* RecursiveSyncDispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* RecursiveSyncDispatch.swift */; };
 		7B99E3A32199C3010024FDBD /* RecursiveSyncDispatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B99E39A2199C3010024FDBD /* RecursiveSyncDispatch.framework */; };
 		7B99E3B12199C3200024FDBD /* RecursiveSyncDispatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* RecursiveSyncDispatchTests.swift */; };
 		7B99E3B32199C3230024FDBD /* RecursiveSyncDispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* RecursiveSyncDispatch.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7B80A9C12236A6AB00CECD67 /* RecursiveSyncDispatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RecursiveSyncDispatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B99E3942199AA330024FDBD /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
 		7B99E39A2199C3010024FDBD /* RecursiveSyncDispatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RecursiveSyncDispatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B99E3A22199C3010024FDBD /* RecursiveSyncDispatchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecursiveSyncDispatchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -35,6 +37,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		7B80A9BD2236A6AB00CECD67 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7B99E3972199C3010024FDBD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -84,6 +93,7 @@
 			children = (
 				7B99E39A2199C3010024FDBD /* RecursiveSyncDispatch.framework */,
 				7B99E3A22199C3010024FDBD /* RecursiveSyncDispatchTests.xctest */,
+				7B80A9C12236A6AB00CECD67 /* RecursiveSyncDispatch.framework */,
 			);
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
@@ -121,6 +131,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		7B80A9BA2236A6AB00CECD67 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7B99E3952199C3010024FDBD /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -131,6 +148,23 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		7B80A9B92236A6AB00CECD67 /* RecursiveSyncDispatch-Static */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B80A9BE2236A6AB00CECD67 /* Build configuration list for PBXNativeTarget "RecursiveSyncDispatch-Static" */;
+			buildPhases = (
+				7B80A9BA2236A6AB00CECD67 /* Headers */,
+				7B80A9BB2236A6AB00CECD67 /* Sources */,
+				7B80A9BD2236A6AB00CECD67 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "RecursiveSyncDispatch-Static";
+			productName = RecursiveSyncDispatch;
+			productReference = 7B80A9C12236A6AB00CECD67 /* RecursiveSyncDispatch.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		7B99E3992199C3010024FDBD /* RecursiveSyncDispatch */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7B99E3AB2199C3020024FDBD /* Build configuration list for PBXNativeTarget "RecursiveSyncDispatch" */;
@@ -176,6 +210,9 @@
 				LastUpgradeCheck = 9999;
 				ORGANIZATIONNAME = happn;
 				TargetAttributes = {
+					7B80A9B92236A6AB00CECD67 = {
+						ProvisioningStyle = Automatic;
+					};
 					7B99E3992199C3010024FDBD = {
 						CreatedOnToolsVersion = 10.1;
 						ProvisioningStyle = Automatic;
@@ -200,6 +237,7 @@
 			projectRoot = "";
 			targets = (
 				7B99E3992199C3010024FDBD /* RecursiveSyncDispatch */,
+				7B80A9B92236A6AB00CECD67 /* RecursiveSyncDispatch-Static */,
 				7B99E3A12199C3010024FDBD /* RecursiveSyncDispatchTests */,
 			);
 		};
@@ -216,6 +254,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		7B80A9BB2236A6AB00CECD67 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B80A9BC2236A6AB00CECD67 /* RecursiveSyncDispatch.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7B99E3962199C3010024FDBD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -243,11 +289,40 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		7B80A9BF2236A6AB00CECD67 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.happn.RecursiveSyncDispatch;
+				PRODUCT_NAME = RecursiveSyncDispatch;
+			};
+			name = Debug;
+		};
+		7B80A9C02236A6AB00CECD67 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.happn.RecursiveSyncDispatch;
+				PRODUCT_NAME = RecursiveSyncDispatch;
+			};
+			name = Release;
+		};
 		7B99E3AC2199C3020024FDBD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -262,6 +337,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -346,7 +422,6 @@
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_NS_ASSERTIONS = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -423,7 +498,6 @@
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_VERSION = A;
@@ -457,6 +531,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		7B80A9BE2236A6AB00CECD67 /* Build configuration list for PBXNativeTarget "RecursiveSyncDispatch-Static" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B80A9BF2236A6AB00CECD67 /* Debug */,
+				7B80A9C02236A6AB00CECD67 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		7B99E3AB2199C3020024FDBD /* Build configuration list for PBXNativeTarget "RecursiveSyncDispatch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
