@@ -25,13 +25,16 @@ extension DispatchQueue {
 //	public func recursiveSync(execute workItem: DispatchWorkItem)
 	
 	public func recursiveSync<T>(execute work: () throws -> T) rethrows -> T {
-		if queueStackCheck(mode: .push) {
+		guard queueStackCheck(mode: .push) else {
+			/* No modification on the thread stack check queue: we already are on
+			 * the queue. We execute the block directly, synchronously. */
 			return try work()
-		} else {
-			let ret = try sync(execute: work)
-			_ = queueStackCheck(mode: .pop)
-			return ret
 		}
+		
+		/* Let’s sync dispatch the block normally. */
+		let ret = try sync(execute: work)
+		_ = queueStackCheck(mode: .pop)
+		return ret
 	}
 	
 	/* Not implemented yet. (How do we process the flags?) */
@@ -50,6 +53,9 @@ extension DispatchQueue {
 	
 	private static let queuesPerThreadKey = "HPN_RSD__QueuesWithRecursiveDispatchOnThread"
 	
+	/** Push or pop on the thread stack check queue.
+	
+	- returns: `true` if the stack was modified, `false` otherwise. */
 	private func queueStackCheck(mode: QueueStackCheckMode) -> Bool {
 		let checked = Unmanaged.passUnretained(self).toOpaque()
 		var queuesSet = Thread.current.threadDictionary[DispatchQueue.queuesPerThreadKey] as! Set<UnsafeMutableRawPointer>? ?? Set()
@@ -61,7 +67,7 @@ extension DispatchQueue {
 		}
 		
 		if modified {Thread.current.threadDictionary[DispatchQueue.queuesPerThreadKey] = queuesSet}
-		return !modified
+		return modified
 	}
 	
 }
