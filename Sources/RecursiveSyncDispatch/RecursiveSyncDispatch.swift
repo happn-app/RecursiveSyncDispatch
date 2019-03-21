@@ -24,6 +24,11 @@ extension DispatchQueue {
 //	@available(OSX 10.10, iOS 8.0, *)
 //	public func recursiveSync(execute workItem: DispatchWorkItem)
 	
+	/** Safe reentrant sync dispatch of a block on a **private** queue.
+	
+	- important: The recursive dispatch is safe as long as all dispatch to your
+	queue are done using this method! This is why you should only use this for
+	private queues. */
 	public func recursiveSync<T>(execute work: () throws -> T) rethrows -> T {
 		guard queueStackCheck(mode: .push) else {
 			/* No modification on the thread stack check queue: we already are on
