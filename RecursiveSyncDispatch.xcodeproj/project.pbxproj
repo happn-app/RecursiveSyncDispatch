@@ -25,7 +25,7 @@
 
 /* Begin PBXFileReference section */
 		7B80A9C12236A6AB00CECD67 /* RecursiveSyncDispatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RecursiveSyncDispatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7B99E3942199AA330024FDBD /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
+		7B99E3942199AA330024FDBD /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; wrapsLines = 1; };
 		7B99E39A2199C3010024FDBD /* RecursiveSyncDispatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RecursiveSyncDispatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B99E3A22199C3010024FDBD /* RecursiveSyncDispatchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecursiveSyncDispatchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B99E3B62199C34E0024FDBD /* Test-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Test-Info.plist"; sourceTree = "<group>"; };
