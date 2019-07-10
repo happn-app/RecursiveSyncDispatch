@@ -5,4 +5,4 @@
 `recursiveSync` method to have recursive sync dispatch working.
 
 ## Credits
-This project is a packaged implementation of https://stackoverflow.com/a/19838227/1152894.
+This project is a packaged implementation of https://stackoverflow.com/a/19838227.
