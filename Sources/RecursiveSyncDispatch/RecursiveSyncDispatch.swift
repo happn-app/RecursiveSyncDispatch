@@ -24,9 +24,10 @@ extension DispatchQueue {
 //	@available(OSX 10.10, iOS 8.0, *)
 //	public func recursiveSync(execute workItem: DispatchWorkItem)
 	
-	/** Safe reentrant sync dispatch of a block on a **private** queue.
+	/**
+	Safe reentrant sync dispatch of a block on a **private** queue.
 	
-	- important: The recursive dispatch is safe as long as all dispatch to your
+	- Important: The recursive dispatch is safe as long as all dispatch to your
 	queue are done using this method! This is why you should only use this for
 	private queues. */
 	public func recursiveSync<T>(execute work: () throws -> T) rethrows -> T {
@@ -58,9 +59,10 @@ extension DispatchQueue {
 	
 	private static let queuesPerThreadKey = "HPN_RSD__QueuesWithRecursiveDispatchOnThread"
 	
-	/** Push or pop on the thread stack check queue.
+	/**
+	Push or pop on the thread stack check queue.
 	
-	- returns: `true` if the stack was modified, `false` otherwise. */
+	- Returns: `true` if the stack was modified, `false` otherwise. */
 	private func queueStackCheck(mode: QueueStackCheckMode) -> Bool {
 		let checked = Unmanaged.passUnretained(self).toOpaque()
 		var queuesSet = Thread.current.threadDictionary[DispatchQueue.queuesPerThreadKey] as! Set<UnsafeMutableRawPointer>? ?? Set()
